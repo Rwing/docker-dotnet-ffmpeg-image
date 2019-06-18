@@ -12,8 +12,10 @@ RUN apk add --no-cache \
         lttng-ust \
         tzdata \
         userspace-rcu \
-        zlib
-
+        zlib \
+        libc6-compat \
+	libunwind-dev
+	
 # Configure web servers to bind to port 80 when present
 ENV ASPNETCORE_URLS=http://+:80 \
     # Enable detection of running in a container
